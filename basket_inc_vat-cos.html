@@ -106,6 +106,9 @@
 	                                <span>&nbsp;</span>
 	                            </th>
 	                            <th class="myshp_basket_product_unitprice">
+	                                <span>Prijs</span>
+	                            </th>
+	                            <th class="myshp_basket_product_unitprice">
 	                                <span>Prijs per stuk</span>
 	                            </th>
 	                            <th class="myshp_basket_product_totalprice">
@@ -135,16 +138,15 @@
 	                                    </span>
 	                                </a>
 	                            </td>
-	                            <td class="myshp_basket_product_unitprice">
-	                                <span style="myshop-value:inc-vat-price-formatted;white-space:nowrap;"></span>
-	                            </td>
+								<td class="myshp_basket_product_unitprice"><span style="myshop-value:price-formatted;"></span></td>
+								<td class="myshp_basket_product_unitprice"><span style="myshop-value:inc-vat-price-formatted;white-space:nowrap"></span></td>
 	                            <td class="myshp_basket_product_totalprice">
 	                                <span style="myshop-value:inc-vat-price-line-total-formatted;white-space:nowrap;"></span>
 	                            </td>
 	                        </tr>
 	                        <!-- myshp_basket_action Block-->
 	                        <tr class="myshp_basket_action" style="myshop-repeat:action-list">
-	                            <td class="myshp_basket_action_label" colspan="5">
+	                            <td class="myshp_basket_action_label" colspan="6">
 	                                <span style="myshop-value:label">
 	                                    &nbsp;
 	                                </span>
@@ -160,7 +162,7 @@
 	                        </tr>
 	                        <!-- myshp_basket_shipping Block-->
 	                        <tr class="myshp_basket_shipping" style="myshop-has:shipping-selection">
-	                            <td class="myshp_basket_shipping_selector" colspan="5" align="right">
+	                            <td class="myshp_basket_shipping_selector" colspan="6" align="right">
                                     <span style="myshop-action:shipping-selection">
                                         &nbsp;
                                     </span>
@@ -172,6 +174,7 @@
 	                            </td>
 	                        </tr>
 							<tr class="myshp_basket_spacer">
+	                            <td height="1"><div>&nbsp;</div></td>
 	                            <td height="1"><div>&nbsp;</div></td>
 	                            <td height="1"><div>&nbsp;</div></td>
 	                            <td height="1"><div>&nbsp;</div></td>
@@ -225,7 +228,7 @@
                                         </tr>
                                     </table>
 	                            </td>
-	                            <td colspan="5" style="myshop-not-has:action-coupon-code;">&nbsp;
+	                            <td colspan="6" style="myshop-not-has:action-coupon-code;">&nbsp;
 
 	                            </td>
 	                        </tr>
@@ -241,7 +244,7 @@
 	                            </td>
 								</span>
 								<span style="myshop-not-has:vat-list">
-								<td colspan="5" class="myshp_basket_total_label">
+								<td colspan="6" class="myshp_basket_total_label">
 	                                <strong>
 										<span style="myshop-resource:total">
 		                                    Totaal
@@ -256,7 +259,7 @@
 	                            </td>
 	                        </tr>
 	                        <tr style="myshop-has:action-coupon-code" class="myshp_basket_coupon">
-	                            <td colspan="3" align="right" valign="bottom" class="myshp_basket_coupon_container">
+	                            <td colspan="4" align="right" valign="bottom" class="myshp_basket_coupon_container">
 	                                <table width="100%" id="myshp_basket_coupon" align="right">
 	                                    <tr>
 	                                        <td id="myshp_basket_coupon_field">
