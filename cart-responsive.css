@@ -8,7 +8,6 @@
 /*width:635px;*/
 margin:0 auto;
 }
- 
 
 .myshp_checkout h3{
 
@@ -76,7 +75,7 @@ float:right;
 margin-top:5px;
 }
 .myshp_required_label{
-color:#FF0000;
+color:#FFEB00;
 }
 .myshp_checkout_info{
 margin:10px 0;
@@ -119,7 +118,7 @@ border-collapse:separate;
 	border-left:0px;
 }
 .myshp_basket_products_header{
-	background-color:#fff !important;
+	background-color:#fff !important
 }
 .myshp_checkout_products table tr.myshp_basket_vat table.myshp_basket_vat_table tr.myshp_basket_vat_total_divider{
 background-color:#B6B6B6;
@@ -423,6 +422,7 @@ text-align:right;
 				.myshp_checkout_products table tr.myshp_basket_product td span{
 					width: auto;
 					float: right;
+					padding-right: 8px;
 				}
 
 				.myshp_checkout_products table tr.myshp_basket_product td.myshp_basket_product_quantity span {
@@ -617,12 +617,13 @@ text-align:right;
 	margin:20px 0 0 0;
 }
 .myshp_checkout.myshp_register_login .myshp_block.myshp_checkout_block{
-width: 47.5%;
+	width: 47.5%;
     float: left;
     min-height: 215px;
     border: 1px solid #FFEC01;
     margin: 0;
     padding: 10px;
+
 }
 @media all and (max-width: 560px) {
 	.myshp_checkout_products tr.myshp_basket_shipping {
@@ -1229,8 +1230,9 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
 #myshp-body .myshp_checkout_confirmation .myshp_checkout_customerdata_field,
 #myshp-body .myshp_checkout_confirmation .myshp_checkout_info_block {
 	line-height: 150%;
-    font-size: 12px;
+	font-size: 16px;
     color: #5c5c5c;
+
 }
 
 
@@ -1304,6 +1306,7 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
     line-height: 20px !important;
     font-size: 12px !important;
     height: auto !important;
+
 }
 #myshp-body .myshp_checkout label {
 	font-weight: 300;
@@ -1415,20 +1418,21 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
 	box-sizing: border-box !important;
 	background-image: none !important;
 	margin: 0 3px !important;
-	background: #FFEC01;
 	outline: none;
 	text-decoration: none;
 	display: block!important;
-	padding: 5px 20px 6px !important;
-	-webkit-border-radius: 14px!important;
-	-moz-border-radius: 14px!important;
-	border-radius: 14px!important;
+	-moz-border-radius: 8px !important;
+	-webkit-border-radius: 8px !important;
+	    border-radius: 14px!important;
+  line-height: 16px !important;
+	font-size: 13px !important;
 	color: #000!important;
-	font-size: 13px!important;
 	font-weight: bold!important;
   font-family: Arial,Verdana,sans-serif!important;
 	border: 2px solid #ffeb00!important;
 	background: #ffeb00!important;
+	    padding: 5px 20px 6px !important;
+
 }
 #myshp-body .cos-opc .myshp_button:hover,
 #myshp-body .myshp_checkout .myshp_button:hover,
@@ -1439,6 +1443,7 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
 #myshp_register_login .myshp_control_buttons .icon_image_arrow_left,
 #myshp-body .cos-opc .myshp_button_prev {
 	border: 2px solid #ffeb00!important;
+	background: #fff!important;
 }
 #myshp_register_login .myshp_control_buttons a {
 	max-width: 250px;
@@ -1504,8 +1509,6 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
 		color: #2a2929;
 	}
 }
-
-
 @media (max-width: 560px) {
 	#myshp-body .myshp_checkout_container .myshp_button {
 		margin-bottom: 20px !important;
@@ -1600,44 +1603,43 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
 		padding-top: 15px!important;
 	}
 }
-
 #myshp-body a.myshp_button_help, #myshp-body a.myshp_button_continueshopping{
     text-transform: lowercase;
 }
 
 @media(min-width:900px){
-	body #myshp-body a.myshp_button_help:link,
-	body #myshp-body a.myshp_button_help:hover,
-	body #myshp-body a.myshp_button_help:visited{
-	    margin: auto !important;
-	    width: 71px;
-	    float: none;
-	}
+    body #myshp-body a.myshp_button_help:link,
+    body #myshp-body a.myshp_button_help:hover,
+    body #myshp-body a.myshp_button_help:visited{
+        margin: auto !important;
+        width: 71px;
+        float: none;
+    }
 
-	.myshp_checkout.myshp_register_login .myshp_block.myshp_checkout_block .myshp_box > p{
-		min-height: 100px;
-	}
-	body #myshp-body .cos-opc .myshp_button{
-		width:auto !important;
-	}
-	.cos-opc .myshp_checkout.myshp_checkout_address, .cos-opc .myshp_checkout.myshp_checkout_address + .second_col_ship_pay {
-		border-right:1px solid #ffeb00;
-		min-height: 1034px;
-	}
+    .myshp_checkout.myshp_register_login .myshp_block.myshp_checkout_block .myshp_box > p{
+        min-height: 100px;
+    }
+    body #myshp-body .cos-opc .myshp_button{
+        width:auto !important;
+    }
+    .cos-opc .myshp_checkout.myshp_checkout_address, .cos-opc .myshp_checkout.myshp_checkout_address + .second_col_ship_pay {
+        border-right:1px solid #ffeb00;
+        min-height: 1034px;
+    }
 }
 
 
 #myshp_checkout_login_password{
-	border-radius:0;
+    border-radius:0;
 }
 
  #myshp-body .cos-opc{
- 	font-size:12px;
- 	color:#5c5c5c
+     font-size:12px;
+     color:#5c5c5c
  }
 
  #myshp-body #myshp_basket h3, .title_adress_h3{
- 	color:#5c5c5c 	
+     color:#5c5c5c     
  }
 
 #myshp-body .myshp_checkout_block_login .myshp_box td input[type="text"]#myshp_checkout_login_username,
@@ -1652,7 +1654,19 @@ tr.myshp_basket_products_header th.myshp_checkout_shippingcost, .myshp_checkout_
 }
 
 #myshp-body .myshp_checkout_block_login .myshp_block_spacer {
-	display:none !important;
+    display:none !important;
 }
 
- 
+@media(min-width:800px){
+	.myshp_control_buttons a.myshp_button {
+	    width: auto !important;
+	    float: right !important;
+	}
+	.myshp_control_buttons a.myshp_button.myshp_button_continueshopping {
+		float:left !important;
+	}
+	.myshp_basket_product_description p {
+	    float: left !important;
+    	width: 100% !important;
+	}
+}
