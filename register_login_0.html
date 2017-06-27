@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title>Register - Login</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Register Login, $Revision: 2865 $, $Date: 2009-11-09 06:43:49 -0300 (Mon, 09 Nov 2009) $"/>
+    </head>
+	<body>
+		<style type="text/css">
+			
+			body #myshp-body .myshp_checkout_block_login .myshp_box td 
+			input[type="password"]#myshp_checkout_login_password{
+			    border-color:#FFEC01 !important;
+    			border-radius: 14px !important;
+			}
+
+		</style>
+		<div class="myshp_checkout myshp_register_login">
+	 
+	 		<div class="myshp_checkout_container">
+	 			
+				<!-- Begin - Checkout Header -->
+				<h2>
+	                <span style="myshop-resource:login.header">
+	                    Login
+	                </span>
+	            </h2>
+	       		<!-- End - Checkout Header -->
+				
+				<!-- Begin - Checkout Breadcrum -->
+	            <div class="myshp_checkout_breadcrumb">
+	                <ul>
+	                    <li style="myshop-has:checkout-part-basket" class="myshp_checkout_breadcrumb_active myshp_checkout_breadcrumb_preactive"> 
+	                        <span style="myshop-resource:basket">Shopping cart</span>
+							<span></span>
+	                    </li>
+	                    <li class="myshp_checkout_breadcrumb_active">
+	                        <span style="myshop-resource:title.address">Address</span>
+							<span></span>
+	                    </li>
+	                    <li style="myshop-has:checkout-part-shipping">
+	                        <span style="myshop-resource:button.deliverymethod">Shipping</span>
+	                    </li>
+	                    <li style="myshop-has:checkout-part-payment-method">
+	                        <span style="myshop-resource:button.paymentmethod">Payment</span>
+	                    </li>
+	                    <li style="myshop-has:checkout-part-approval">
+	                        <span style="myshop-resource:title.approval">Approval</span>
+	                    </li>
+	                    <li>
+	                        <span style="myshop-resource:button.placeorder">Confirmation</span>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- End - Checkout Breadcrum -->
+				
+				<!-- Begin - Checkout Login -->
+				<div class="myshp_checkout_block_login" style="myshop-block:register-login">
+					<div class="myshp_block myshp_checkout_block"> 
+						<h3>
+							<span style="myshop-resource:label.login.account">Ik heb een account</span>
+						</h3>
+						<div class="myshp_box">
+							<table width="100%">
+								<tr>
+									<td>
+										<label for="myshp_checkout_login_username">
+											<span style="myshop-resource:email">E-mail</span>
+										</label>
+									</td>
+									<td>
+										<input id="myshp_checkout_login_username" style="myshop-control:username"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="myshp_checkout_login_password">
+											<span style="myshop-resource:login.password">Wachtwoord</span>
+										</label>
+									</td>
+									<td>
+										<input id="myshp_checkout_login_password" type="password" style="myshop-control:password"/>
+									</td>
+								</tr>
+							</table>
+							<!-- Begin - Control Buttons -->
+							<div class="myshp_control_buttons">
+								<a href="#" class="myshp_button myshp_button_nextstep" style="myshop-action:login" data-role="button">
+									<span>
+										<span style="myshop-resource:button.nextstep">volgende stap</span>
+										<span>&raquo;</span>
+									</span>
+								</a>
+								<a href="#" class="myshp_checkout_link" style="myshop-action:request-password;">
+									<span>
+										<span style="myshop-resource:request.password">wachtwoord vergeten</span>
+									</span>
+								</a>
+								<div class="clear">&nbsp;</div>
+							</div>
+							<!-- End - Control Buttons -->
+						</div>
+					</div>
+					<div class="myshp_block_spacer">&nbsp;</div> 
+					<div class="myshp_block myshp_checkout_block"> 
+						<h3>
+							<span style="myshop-resource:label.login.noaccount">Ik heb nog geen account</span>
+						</h3>
+						<div class="myshp_box">
+							<p style="myshop-resource:label.login.question">Wij vragen u wat gegevens in te vullen om het bestellen zo veilig en makkelijk mogelijk te maken.</p>
+					
+							<!-- Begin - Control Buttons -->
+							<div class="myshp_control_buttons">
+								<div style="myshop-not-is:registration-required">
+									<a href="#" class="myshp_button myshp_button_nextstep" style="myshop-action:next-page;">
+										<span>
+											<span>bestellen zonder account</span>
+											<span>&raquo;</span>
+										</span>
+									</a>
+								</div>
+								<a href="#" class="myshp_button myshp_button_nextstep" style="myshop-action:start-register" data-role="button">
+									<span>
+										<span>bestellen met account</span>
+										<span>&raquo;</span>
+									</span>
+								</a>
+								<div class="clear">&nbsp;</div>
+							</div>
+							<!-- End - Control Buttons -->
+						</div>
+					</div>
+				</div>
+				<!-- End - Checkout Login -->
+				
+				<div class="clear">&nbsp;</div>
+				
+				<!-- Begin - Control Buttons -->
+				<div class="myshp_control_buttons">
+					<a href="#" class="myshp_button myshp_button_prev" style="myshop-action:previous-page" data-role="button">
+						<span>
+							<span>&laquo;</span>
+							<span style="myshop-resource:button.previous.step">vorige stap</span>
+						</span>
+					</a>
+					<div class="clear">&nbsp;</div>
+				</div>
+				<!-- End - Control Buttons -->
+			
+			</div>
+			
+			<!-- Begin - MijnWinkel PoweredBy Block -->
+            <div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+                &nbsp;
+            </div>
+			<!-- End - MijnWinkel PoweredBy Block -->
+			
+		</div>
+	</body>
+</html>

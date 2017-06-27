@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<title>Customer Data</title>
+		<meta content="myshop-meta:keywords" name="keywords" />
+		<meta content="myshop-meta:description" name="description" />
+		<meta content="author"
+		name="MyShop, Checkout Address, $Revision: 8833 $, $Date: 2011-05-19 09:38:53 -0300 (Thu, 19 May 2011) $"
+		/>
+
+	</head>
+	<body>
+		<style>
+			.title_adress_h3 {
+				margin-top: 2%;
+			}
+			.customer__fileds1 {
+				width: 100%;
+				display: block;
+				float: left;
+				margin: 0;
+			}
+
+			.msresp_address_form label {
+				display: inline-block;
+				width: 100%;
+			}
+
+
+			.msresp_address_form select {
+				display: inline-block;
+			}
+
+			.myshp_required_label{
+				color:red;
+			}
+
+			@media (min-width: 1224px) {
+
+				.msresp_address_form {
+					width: 100%;
+				}
+
+				.myshp_checkout_address {
+					width: 33.3%;
+					float: left;
+					padding: 10px;
+					padding-left: 0;
+					margin-bottom: 20px;
+				}
+
+				.msresp_address_form__control {
+					  width: 100%;
+					  padding-right: 10px;
+					  float: none !important;
+					  display: inline-block;
+				}
+
+				.msresp_address_form input[type=text], .msresp_address_form input[type=password] {
+					  height: 26px;
+					  margin-bottom: 5px;
+				}
+
+				.msresp_address_form textarea {
+					height:auto;
+					margin-bottom: 5px;
+				}
+
+				.msresp_address_form select, table{
+					width:100%;
+				}
+
+				#myshp_checkout_delivery_selection label {
+					float:left;
+				}
+
+				.msresp_payment__choose, .msresp_shipping__choose{
+					width:50% !important;;
+					margin:0 !important;
+				}
+
+				.msresp_payment__cost, .msresp_shipping__cost{
+					width:49% !important;
+					text-align:right !important;
+				}
+
+				.msresp_payment__description select {
+					width:100%;
+				}
+
+				body #myshp-body .msresp_payment__description, body .msresp_shipping__description {
+					width: 50%!important;
+					margin-right: 0;
+				}
+
+
+				body .msresp_payment__choose, body .msresp_shipping__choose {
+					width: 50% !important;;
+				}
+
+				body msresp_payment__cost, body .msresp_shipping__cost {
+					width: 40% !important;
+				}
+
+				.msresp_address_form__control label {
+					width: auto !important;
+					font-weight:normal;
+				}
+
+				.msresp_address_form input[type=password] {
+					width: 100%;
+				}
+
+				.second_col_ship_pay {
+					float: left;
+					width: 33.3%;
+					clear: right;
+					padding: 10px;
+					padding-right: 0;
+				}
+
+				.msresp_payment__cost, .msresp_shipping__cost {
+					width: auto;
+				}
+
+				.myshp_checkout_payment {
+					margin-top: 20px;
+				}
+
+				.msresp_payment__choose, .msresp_shipping__choose {
+					width: 100%;
+				}
+
+				.total_sq {
+					width: 33.3%;
+					margin: auto;
+					padding: 0 0 20px 20px;
+					clear: right;
+					float: right;
+				}
+
+				.total_sq .msresp_vat__label {
+					width: 50%;
+				}
+
+			}
+
+			.msresp_vat__label.vls {
+				text-align: right;
+				width: 50%;
+			}
+
+			.msresp_vat__label {
+				width: 50%;
+			}
+
+			.myshp_checkout_address {
+				margin-bottom: 20px;
+			}
+
+			.myshp_control_buttons {
+				float: left;
+				width: 100%;
+			}
+
+			.myshp_button_prev {
+				float: left;
+			}
+
+			.myshp_button_next, .myshp_button_register {
+				float: right;
+			}
+
+			#myshp_basket {
+				float: left;
+				width: 33.3%;
+				padding:10px 0 20px 20px;
+			}
+
+			.msresp_total__value {
+				text-align: right;
+			}
+
+			.msresp_colist__total {
+				text-align: right;
+			}
+
+			.msresp_basket_header__total {
+				text-align: right;
+			}
+
+			@media (max-width: 768px) {
+				#myshp_basket {
+					width: 100%;
+					padding: 0;
+				}
+
+				#myshp_checkout_delivery_selection label {
+					 float: left;
+				}
+			}
+
+			.msresp_vat {
+				border: none;
+			}
+
+			/* Address fields config */
+
+
+			@media (min-width: 1224px) {
+				.msresp_coupon__value {
+					width: 35%;
+				}
+
+				.msresp_coupon__label{
+					width: 60%;
+					text-align: left;
+				}
+
+				.myshp_b_38, .myshp_b_3, .myshp_d_103, .myshp_d_138 {
+					width:50%;
+				}
+
+				.myshp_b_29{
+					width: 100%;
+				}
+
+				.myshp_b_4, .myshp_d_104{
+					width: 75%;
+				}
+
+				.myshp_b_5, .myshp_d_105 {
+					width: 25%;
+				}
+
+				.myshp_b_6, .myshp_d_106 {
+					width: 35%;
+				}
+
+				.myshp_b_7, .myshp_d_107{
+					  width: 65%;
+				}
+
+				.myshp_b_18, .myshp_b_8, .myshp_b_0, .myshp_b_13, .myshp_b_40, .myshp_b_37{
+					width:100%;
+				}
+				.msresp_basket_header__desc {
+					  width: 55%;
+				}
+				.msresp_basket_header__qty{
+					  width: 14%;
+				}
+
+				.msresp_colist__description-info {
+					  width: 81%;
+					  padding-right: 20%;
+				}
+				.msresp_colist__description-qty {
+					width: 16%;
+				}
+
+				.msresp_colist__description {
+					margin-left:0;
+				}
+
+				.msresp_colist__description{
+					width: 85%;
+				}
+			}
+
+			.myshp_b_37, .myshp_b_40 {
+				padding-top:10px;
+			}
+
+			.myshp_b_6 .msresp_address_form__control{
+				max-height: 30px;
+			}
+
+
+			@media (max-width: 1024px) {
+				.msresp_address_form label{
+					width: auto;
+					float: left;
+				}
+				input[type=radio], input[type=checkbox]{
+					float: left;
+				}
+			}
+
+			#myshp_checkout_delivery_selection input[type=radio] {
+				width: 7%;
+			}
+
+			.visible-xs, .visible-sm, .visible-md, .visible-lg {
+			  display: none!important;
+			}
+
+			@media (min-width: 768px) {
+				.msresp_vat__label {
+				  width: 50% !important;
+				}
+				.msresp_colist__description {
+				  width: 71% !important;
+				}
+				.msresp_colist__description-qty {
+				  width: 40 !important%;
+				  float: left;
+				  text-align: right !important;
+				  padding-right: 20px !important;
+				}
+				.msresp_colist__total {
+				  width:27% !important;
+				}
+			}
+
+			.msresp_colist__description {
+				margin-left:0 !important;
+			}
+
+			#myshp-body footer {
+				background-color:transparent;
+			}
+
+			footer ul li a {
+				font-style: normal;
+			}
+			
+
+			#myshp-body .myshp_checkout td {
+				font-size:inherit;
+			}
+
+			.myshp_block.myshp_checkout_products *, 
+			.myshp_block.myshp_checkout_products {
+				border:none;
+				background-color:transparent;
+				background:none;
+			}
+
+			#myshp-body .myshp_checkout table td{
+				vertical-align:top;
+			}
+
+			.myshp_checkout_payment_cell_label label:first-child {
+				font-weight:bold !important;
+			}
+
+			.myshp_checkout_payment_cell_label img {
+				clear: right;
+			    float: left;
+			    padding: 10px 77px 10px 0px;
+			}
+			
+			#myshp-body #myshp_basket h3:first-letter, .title_adress_h3:first-letter {
+				text-transform:uppercase;
+			}
+
+			@media (min-width: 768px) {
+
+				#myshp-body .msresp_payment__description, #myshp-body .msresp_shipping__description {
+				    margin-right: 0;
+				    width: 53%!important;
+				}
+				body .msresp_payment__choose, body .msresp_shipping__choose {
+				    width: 58% !important;
+				}
+			}
+
+			#myshp_basket{
+				padding: 10px 0 20px 10px !important;
+			}
+			.total_sq{
+			    padding: 0 0 20px 10px !important;
+			}
+
+			#pakjeGemakButton{
+			    float: left;
+    			width: 100%;
+			}
+			#pakjeGemakButton span{
+				display:inline;
+				width:auto !important;
+			}
+
+			
+			@media(min-width:768px){
+				.myshp_control_buttons .myshp_button_next {
+				    float: right !important;
+				    width: auto !important;
+				}
+			}
+
+			.myshp_b_37 > label {
+				float:left;
+				width:100%;
+			}
+		</style>
+
+		<!-- basket                                                                                                                   -->
+
+
+<div class="cos-opc">
+
+        <div class="myshp_checkout">
+
+			<div class="myshp_checkout_container">
+
+				<!-- Begin - Checkout Header -->
+				<h2>
+	                <span style="myshop-resource:title.address">
+	                    Adres
+	                </span>
+	            </h2>
+	            <!-- End - Checkout Header -->
+
+			</div>
+		</div>
+		<div style="myshop-not-has:products">
+			<h1><span style="myshop-resource:empty">Winkelwagen is leeg</span></h1>
+		</div>
+
+		<!-- Begin - Basket Empty -->
+		<div class="myshp_checkout_basket_empty" style="myshop-not-has:products">
+			<p style="myshop-resource:isempty">
+				Uw winkelwagen is nog leeg. Ga terug naar de winkel om producten te bestellen
+			</p>
+			<p style="myshop-resource:isempty2">
+				Als u al producten had toegevoegd, kan de reden hiervoor zijn dat uw sessie verlopen is
+			</p>
+			<p style="myshop-resource:isempty3">
+				Dit gebeurt 60 minuten na de laatste wijziging of wanneer u uw browser tussendoor afsluit
+			</p>
+		</div>
+		<!-- End - Basket Empty -->
+
+		<!-- address                                                                                                                                  -->
+		<div class="myshp_checkout myshp_checkout_address">
+
+			<!-- Begin - Customerdata Shipping -->
+			<h3 class="title_adress_h3"><span style="myshop-resource:address.invoice">Factuuradres</span></h3>
+
+			<div class="msresp_address_form">
+				<span style="myshop-repeat:customer-fields" class="customer__fileds1 myshp_{$FieldName}"> <span style="myshop-is:checkout-address-field">
+						<div style="myshop-not-is:read-only-user-info">
+							<label>
+								<span style="myshop-value:label"> &nbsp; </span>
+								<span class="myshp_required_label" style="myshop-is:required-field"> * </span>
+								<span class="" style="myshop-not-is:required-field">&nbsp;&nbsp;</span>
+							</label>
+						</div> <span style="myshop-is:read-only-user-info">
+							<br />
+							<span class="msresp_address_form__label-noform"
+							style="myshop-value:label"> </span>:&nbsp; </span> <span class="msresp_address_form__control" style="myshop-value:control"
+						>&nbsp; </span> </span> </span>
+
+				<span style="myshop-is:register-new-user"> <label> <span style="myshop-resource:password1">Wachtwoord</span> <span class="">*</span> </label>
+					<input type="password" style="myshop-control:password-new1" />
+					<label> <span style="myshop-resource:password2">Wachtwoord</span> <span class="">*</span> </label>
+					<input type="password" style="myshop-control:password-new2" />
+				</span>
+			</div>
+			<!-- End - Customerdata Shipping -->
+
+			<!-- Begin - Checkout Info -->
+			<div class="" style="myshop-resource:required.fields">
+				De velden met een * zijn
+				verplicht
+			</div>
+
+			<!-- Begin - Customerdata Delivery -->
+			<div class="" style="myshop-has:delivery-fields">
+				<h3 class="title_adress_h3"><span style="myshop-resource:address.delivery">Afleveradres</span></h3>
+				<div class="" style="myshop-value:delivery-selection-control;"></div>
+				&nbsp;
+				<div class="msresp_address_form" style="myshop-block:delivery-selection;">
+					<span style="myshop-repeat:customer-fields-delivery" class="customer__fileds1 myshp_{$FieldName}">
+						<label>
+							<span style="myshop-value:label">&nbsp;</span>
+							<span class="myshp_required_label" style="myshop-is:required-field"> * </span>
+							<span class="" style="myshop-not-is:required-field">&nbsp;&nbsp;</span>
+						</label>
+						<span class="msresp_address_form__control" style="myshop-value:control"></span>
+					</span>
+					<div style="myshop-is:read-only-user-info">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+			<!-- End - Customerdata Delivery -->
+
+
+		</div>
+
+
+		<div class="second_col_ship_pay">
+			<!-- Shipping                                                                                                           -->
+
+			<div class="myshp_checkout myshp_checkout_shipping" style="myshop-section:shipping">
+				<h3 class="title_adress_h3"><span style="myshop-resource:button.deliverymethod"> Leverwijze </span></h3>
+				<!-- Begin - Checkout Shipping Data -->
+				<div class="msresp_shipping">
+					<div class="msresp_shipping__choose">
+						<strong> <span>Uw verzendmethode</span> </strong>
+					</div>
+					<div class="msresp_shipping__cost hidden-xs">
+						<strong> <span style="myshop-resource:shippingcost">Verzendkosten</span> </strong>
+					</div>
+				</div>
+
+				<div style="myshop-repeat:shipping-cost-list"
+				class="msresp_shipping well well-sm">
+					<div class="msresp_shipping__control">
+						<span style="myshop-value:control">o</span>
+					</div>
+					<div class="msresp_shipping__description">
+						<label style="myshop-value:label;">&nbsp;</label>
+						<p style="myshop-value:memo">
+							&nbsp;
+						</p>
+					</div>
+					<div class="msresp_shipping__cost">
+						<span class="hidden-xs"> <span style="myshop-value:inc-vat-price-formatted">&nbsp;</span> </span>
+					</div>
+				</div>
+				<!-- End - Checkout Shipping Data -->
+
+				<!-- Begin - Checkout Shipping Memo 
+				<div class="">
+					<p style="myshop-value:memo">
+						&nbsp;
+					</p>
+				</div>-->
+			</div>
+			<!-- End - Checkout Shipping Memo -->
+
+			<!-- Payment                                                                                                           -->
+
+			<div class="myshp_checkout myshp_checkout_payment" style="myshop-section:payment">
+				<h3 class="title_adress_h3"><span style="myshop-resource:button.paymentmethod"> Betaalwijze </span></h3>
+				<!-- Begin - Pay with voucher -->
+				<div style="myshop-not-is-plugin-active:datamatch">
+					<div class="myshp_block myshp_checkout_products" style="myshop-has:action-voucher-code">
+						<span style="myshop-label:voucher-code">code</span>:
+						<input style="myshop-control:voucher-code" size="15" title="" />
+					</div>
+				</div>
+				<!-- End - Pay with voucher -->
+
+				<!-- Begin - Datamatch plugin -->
+				<div style="myshop-is-plugin-active:datamatch">
+					<div class="myshp_block myshp_checkout_products" style="myshop-has:action-voucher-code">
+						<!-- Voucher input -->
+						<table class="dmr-voucher-input" border="0" cellspacing="0" cellpadding="0" width="100%">
+							<tr>
+								<td colspan="4">
+									<span style="myshop-resource:datamatch-voucher-info-1">Bij elke aankoop die u doet in deze webshop spaart u punten.</span><br/>
+									<span style="myshop-resource:datamatch-voucher-info-2">Deze punten kunt u via dit scherm inwisselen voor korting op het totaalbedrag.</span><br /><br />
+									<span style="myshop-resource:datamatch-voucher-info-3">Hiervoor vult u uw laatst toegestuurde kortingcode in en de waarde die u wilt verzilveren.</span><br />
+								</td>
+							</tr>
+							<tr>
+								<td class="td1" style="white-space: nowrap; vertical-align: middle"><span style="myshop-resource:discount-code">Kortingcode</span></td>
+								<td class="td2">&nbsp;</td>
+								<td class="td3"><input style="myshop-control:voucher-code" size="15" title="" /></td>
+								<td style="width: 100%">&#160;</td>
+							</tr>
+							<tr>
+								<td class="td1" style="white-space: nowrap; vertical-align: middle"><span style="myshop-resource:redeem-value">Te verzilveren waarde</span></td>
+								<td class="td2" style="text-align: right; vertical-align: middle">&euro;&nbsp;</td>
+								<td class="td3"><input style="myshop-control:voucher-max-amount" size="5" title="" /></td>
+								<td style="width: 100%">&#160;</td>
+							</tr>
+							<tr style="myshop-has:voucher-amount">
+								<td class="td1">&nbsp;</td>
+								<td class="td2">&nbsp;</td>
+								<td class="td3" colspan="2">
+									<span>
+										<span style="myshop-resource:datamatch-redeem-info-1">U kunt maximaal </span>&#160;<span style="myshop-value:amount-voucher-formatted"/>&#160;<span style="myshop-resource:datamatch-redeem-info-2"> verzilveren</span><br />
+										<span style="myshop-resource:datamatch-redeem-info-3">Wilt u het te verzilveren bedrag wijzigen?</span><br />
+										<span style="myshop-resource:datamatch-redeem-info-4">Ga dan eerst 1 stap terug en voer daarna de code en het bedrag opnieuw in.</span>
+									</span>
+								</td>
+							</tr>
+						</table>
+						<br />
+						<!-- Voucher total -->
+						<div style="myshop-has:voucher-amount">
+
+							<table class="dmr-voucher-total" border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+									<td class="td1" style="max-width: 350px"><span style="myshop-resource:total-basket">Totaal Winkelwagen</span></td>
+									<td class="td2" style="text-align:right"><span style="myshop-value:price-total-formatted"/></td>
+								</tr>
+								<tr>
+									<td class="td1" style="max-width: 350px"><span style="myshop-resource:redeemable">Verzilveren</span></td>
+									<td class="td2" style="text-align:right">- <span style="myshop-value:voucher-max-amount-formatted"/></td>
+								</tr>
+								<tr>
+									<td class="td1 total" style="max-width: 350px"><span style="myshop-resource:total-settle">Totaal af te rekenen</span></td>
+									<td class="td2 total" style="text-align:right"><span style="myshop-value:price-gross-payment-total-formatted"/></td>
+								</tr>
+							</table>
+
+						</div>
+						<!-- Non-voucher total -->
+						<div style="myshop-not-has:voucher-amount">
+							<table class="dmr-voucher-total" border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+									<td class="td1 total" style="max-width: 350px"><span style="myshop-resource:total-settle">Totaal af te rekenen</span></td>
+									<td class="td2 total"><span style="myshop-value:price-total-formatted"/></td>
+								</tr>
+
+							</table>
+						</div>
+					</div>
+					<br/><br/>
+				</div>
+				<!-- End - Datamatch plugin -->
+
+				<!-- Begin - Checkout Payment Data -->
+	            <div class="myshp_block myshp_checkout_products">
+	                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+	                    <tr>
+	                        <td colspan="2">
+	                            <span style="myshop-resource:paymentselect">
+	                                Kies hieronder uw betaalwijze
+	                            </span>
+	                        </td>
+	                        <td class="myshp_checkout_paymentcost">
+	                            <span style="myshop-resource:paymentcost">
+	                                Betaalkosten
+	                            </span>
+	                        </td>
+	                    </tr>
+	                    <tr style="myshop-repeat:payment-method-list" class="myshp_basket_product">
+	                        <td class="myshp_checkout_payment_cell_control">
+	                            <div class="myshp_checkout_payment_control">
+	                                <span style="myshop-value:control">
+	                                    o
+	                                </span>
+	                            </div>
+	                        </td>
+	                        <td class="myshp_checkout_payment_cell_label">
+	                            <h4 style="myshop-value:title;">
+	                                &nbsp;
+	                            </h4>
+	                            <span style="myshop-has:description">
+	                                <p style="myshop-value:description"></p>
+	                            </span>
+	                            <span style="myshop-not-has:description">
+	                                <label style="myshop-value:label"></label><br/>
+	                            </span>
+	                            <span style="myshop-has:issuer-list;">
+	                                <span style="myshop-control:issuer-list"></span>
+	                            </span>
+	                        </td>
+	                        <td class="myshp_checkout_paymentcost">
+	                            <span style="myshop-has:payment-method-costs;">
+	                                <span style="myshop-value:price-formatted">
+	                                    &nbsp;
+	                                </span>
+	                            </span>
+	                        </td>
+	                    </tr>
+	                </table>
+	            </div>
+				<!-- End - Checkout Payment Data -->
+				
+				<!-- Begin - Process Order Popup Message-->
+	            <div class="myshp_checkout_info" style="myshop-block:process-order-popup-message">
+	                <span style="myshop-resource:remark.newpaymentwindow">
+	                    Opmerking:
+	                </span>
+	                <p>Vervolg de afhandeling van de betaling in het nieuw geopend venster.</p>
+	                <p>Is er geen nieuwe venster geopend, <a style="myshop-action:process-order-popup-retry">klik dan hier</a></p>
+	            </div>
+				<!-- End - Process Order Popup Message-->
+			</div>
+			<!-- End - Process Order Popup Message-->
+			<!-- End Payment -->
+		</div>
+
+		<div style="myshop-section:basket">
+
+			<div id="myshp_basket">
+				<div id="myshp_basket_approval">
+					<div id="myshp_basket_products_container">
+						<h3 class="title_adress_h3"><span> Controleer uw  bestelling </span></h3>
+						<div class="msresp_basket_header hidden-xs">
+							<div class="msresp_basket_header__article">
+								<span style="myshop-resource:article">Artikel</span>
+							</div>
+							<div class="msresp_basket_header__desc">
+								<span style="myshop-resource:desc">Omschrijving</span>
+							</div>
+							<div class="msresp_basket_header__qty">
+								<span style="myshop-resource:nr">Aantal</span>
+							</div>
+							<div class="msresp_basket_header__total">
+								<span style="myshop-resource:total">Totaal</span>
+							</div>
+						</div>
+						<div class="msresp_colist" style="myshop-repeat:basket;">
+							<div class="msresp_colist__description">
+								<div class="msresp_colist__description-info">
+									<span style="myshop-value:description;"></span>
+								</div>
+								<div class="msresp_colist__description-qty">
+									<span style="myshop-value:quantity;"></span>
+								</div>
+							</div>
+							<div class="msresp_colist__total">
+								<span style="myshop-value:inc-vat-price-line-total-formatted;"
+								></span>
+							</div>
+						</div>
+
+						<!-- div class="msresp_total">
+						<div class="msresp_total__label">
+						<strong><span style="myshop-resource:total"></span></strong>
+						</div>
+						<div class="msresp_total__value">
+						<span style="myshop-value:price-total-formatted"></span>
+						</div>
+						</div -->
+						<div>
+							<div class="myshp_basket_vat" valign="bottom">
+								<span style="myshop-has:vat-list"> <span style="myshop-not-is:tax-free"> <!--span style="myshop-has:action-coupon-code">
+											<div class="msresp_coupon">
+												<div class="msresp_coupon__label">
+													<span style="myshop-label:coupon-code"></span>
+												</div>
+												<div class="msresp_coupon__value">
+													<input type="text"
+													style="myshop-control:coupon-code" size="15"
+													title="" class="form-control" />
+												</div>
+											</div> </span -->
+										<div class="msresp_vat" style="myshop-repeat:vat-list">
+											<div class="msresp_vat__label">
+												<span
+												style="myshop-value:vat-percentage;white-space:nowrap;"
+												>19</span>
+												<span
+												style="myshop-resource:label.vatpercentage;white-space:nowrap;"
+												>BTW van </span> &nbsp; <span
+												style="myshop-value:inc-vat-vat-from-price-formatted;white-space:nowrap;"
+												>1000000</span>
+											</div>
+											<div class="msresp_vat__label vls">
+												<span style="myshop-value:price-vat-formatted"
+												>100</span>
+											</div>
+										</div>
+										<div style="myshop-is:tax-free">
+											<div colspan="2" class="msresp_vat__label">
+												<span style="myshop-resource:label.vatfree">Geen
+													BTW</span>
+											</div>
+										</div>
+										<div class="msresp_vat_total">
+											<div class="msresp_vat__label">
+												<span style="myshop-resource:total">Total</span>
+												&nbsp; <span style="myshop-resource:vat"
+												>BTW</span>
+											</div>
+											<div class="msresp_vat__label vls">
+												<span
+												style="myshop-value:vat-total-formatted;white-space:nowrap;"
+												>100</span>
+											</div>
+										</div> </span> </span>
+								<span style="myshop-is:tax-free">
+									<div>
+										<div>
+											<div class="myshp_basket_vat_label">
+												<span style="myshop-resource:label.vatfree">Geen
+													BTW</span>
+											</div>
+										</div>
+									</div> </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div style="myshop-section:basket" class="total_sq">
+			<div class="msresp_vat_total" style="myshop-repeat:action-list">
+				<div class="msresp_vat__label" colspan="3">
+					<span style="myshop-value:label">&nbsp;</span>
+				</div>
+				<div class="msresp_vat__label vls">
+					<span style="myshop-value:inc-vat-price-formatted">&nbsp;</span>
+				</div>
+			</div>
+			<div class="msresp_vat_total" style="myshop-has:shipping-costs">
+				<div class="msresp_vat__label" colspan="3">
+					<span
+					style="myshop-resource:shippingcost">Shippingcost</span>&nbsp;(<span
+					style="myshop-value:country">Holland</span>)
+				</div>
+				<div class="msresp_vat__label vls">
+					<span style="myshop-value:inc-vat-price-shipping-formatted">&nbsp;</span>
+				</div>
+			</div>
+			<div class="msresp_vat_total" style="myshop-has:payment-method-costs">
+				<div class="msresp_vat__label" colspan="3">
+					<span
+					style="myshop-resource:paymethod">Betaalmethode</span> (<span
+					style="myshop-value:payment-method">&nbsp;</span>)
+				</div>
+				<div class="msresp_vat__label vls">
+					<span style="myshop-value:inc-vat-price-payment-method-formatted"
+					>&nbsp;</span>
+				</div>
+			</div>
+			<div class="msresp_vat_total">
+				<div class="msresp_vat__label" colspan="3" valign="bottom">
+					<strong style="myshop-resource:total">Totaal</strong>
+				</div>
+				<div class="msresp_vat__label vls" valign="bottom">
+					<strong style="font-weight:bold;myshop-value:price-total-formatted"
+					>&nbsp;</strong>
+				</div>
+			</div>
+		</div>
+			<!-- Begin - Control Buttons -->
+					<div class="myshp_control_buttons test">
+						<div style="myshop-is:register-new-user">
+							<a href="#" class="myshp_button myshp_button_prev"
+							style="myshop-action:previous-page" data-role="button" data-icon="arrow-l"> 
+								<span>
+									<span style="myshop-resource:button.previous.step"> vorige stap </span> 
+								</span> 
+							</a>
+							<a href="#" class="myshp_button myshp_button_register" style="myshop-action:register-new-user" data-role="button" data-icon="plus" data-iconpos="right">
+								<span> <span> afrekenen </span></span> 
+							</a>
+						</div>
+						<div style="myshop-not-is:register-new-user">
+							<div style="myshop-not-is:update-user-info">
+								<a href="#" class="myshp_button myshp_button_prev" style="myshop-action:previous-page" data-role="button" data-icon="arrow-l">
+									<span>
+										<span style="myshop-resource:button.previous.step"> vorige stap </span>
+									</span>
+								</a>
+								<div class="myshp_button_next">
+									<a href="#" class="myshp_button icon_align_right icon_image_arrow_right" style="myshop-action:next-page">
+										<span class="btn_bg_center">
+											<span class="btn_text">
+												<b style="myshop-not-is-payment-method:default*,after pay">
+													<span>afrekenen</span>
+												</b>
+												<b style="myshop-is-payment-method:after pay">
+													<span>afrekenen</span>
+												</b>
+												<b style="myshop-is-payment-method:default*">
+													<span>afrekenen</span>
+												</b>
+											</span>
+										</span>
+									</a>
+								</div>
+								<!--
+								<a href="#" class="myshp_button myshp_button_nextstep"
+								style="myshop-action:next-page;float:right" data-role="button"
+								data-icon="arrow-r" data-iconpos="right">
+								<span>
+								<span style="myshop-resource:button.nextstep"> volgende stap </span>
+								<span class="myshp_button_icon">&raquo;</span>
+								</span>
+								</a>
+								-->
+
+								<div class="" id="pakjeGemakButton" style="display:none;">
+									<a href="#" class="myshp_button myshp_button_next" data-role="button"> <span> locatiekiezer </span> <span class="myshp_button_icon">&raquo;</span> </a>
+								</div>
+							</div>
+						</div>
+						<div class="clear">
+							&nbsp;
+						</div>
+					</div>
+					<!-- End - Control Buttons -->
+
+
+
+		<!-- Begin - MijnWinkel PoweredBy Block -->
+		<div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+			&nbsp;
+		</div>
+		<!-- End - MijnWinkel PoweredBy Block -->
+
+	</div>
+
+		<script>
+			$(document).ready(function() {
+				$('.msresp_qtycnt').each(function() {
+					$(this).change(function() {
+						$(this).next('.qtyupd').show();
+					});
+				});
+			});
+		</script>
+		<script>
+			$(function() {
+				jQuery.fn.equalHeightsProducts = function(px) {
+					jQuery(this).each(function() {
+						/* Set image height */
+
+						/*Set Product Box Height */
+						var currentTallest = 0;
+						jQuery(this).find('.myshp_basket_related_table').each(function(i) {
+							if (jQuery(this).height() > currentTallest) {
+								currentTallest = jQuery(this).height();
+							}
+						});
+						jQuery(this).find('.myshp_basket_related_table').css({
+							'min-height' : currentTallest
+						});
+
+						/*Set Product Image height*/
+						currentTallest = 0;
+						jQuery(this).find('.myshp_basket_related_product_image_container').each(function(i) {
+							if (jQuery(this).height() > currentTallest) {
+								currentTallest = jQuery(this).height();
+							}
+						});
+						jQuery(this).find('.myshp_basket_related_product_image_container').css({
+							'min-height' : currentTallest
+						});
+
+						/* Set Product Features Height */
+						currentTallest = 0;
+						jQuery(this).find('.myshp_basket_related_product_features').each(function(i) {
+							if (jQuery(this).height() > currentTallest) {
+								currentTallest = jQuery(this).height();
+							}
+						});
+						jQuery(this).find('.myshp_basket_related_product_features').css({
+							'min-height' : currentTallest
+						});
+
+					});
+					return this;
+				};
+
+				setTimeout("jQuery('.myshp_basket_related').equalHeightsProducts()", 1000);
+
+
+				$(".myshp_b_40").appendTo(".total_sq");
+				$(".myshp_b_37").appendTo(".total_sq");
+				$(".myshp_control_buttons").appendTo(".total_sq");
+
+				if ($(".myshp_b_39").length > 0 ) {
+					$(".myshp_b_39").insertAfter(".myshp_b_38");
+					$(".myshp_b_3").css("width","35%");
+					$(".myshp_b_39").css("width","15%");
+
+				}
+			});
+
+		</script>
+		<link href="https://www.mijnwinkel.nl/skins/responsive_master/css/bolletje-resp.css" rel="stylesheet"/>
+	</body>
+</html>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/views/library/jquery/plugins/equalHeights/js/equalHeights.js"></script>
+	<script type="text/javascript" src="/views/library/lib_presentation/js/compact.js"></script>
+
+	<link rel="stylesheet" href="/skins/templates/views/common/common.css"></link>
+	<link href="http://myshop.s3-external-3.amazonaws.com/shop2900600.images.productlist_v3.61.css" rel="stylesheet" type="text/css"></link>
+
+	<style type="text/css" style="myshop-block:style-productlist">
+		/* product list scherm (categorien) */
+		.blok-tekst-categorie{padding-bottom:6px;}
+		.blok-tekst-categorie H1{margin-top:8px;padding-bottom:0;}
+		.blok-tekst-categorie H2{padding-top:10px;margin-bottom:0;}
+		.catbar_links, .catbar_rechts{width:30px;}
+		.blok-tekst-categorie a.link-product, .blok-tekst-categorie a:link .link-product,
+		.blok-tekst-categorie a:active .link-product{color:rgb(0,0,0) !important;}
+		.blok-tekst-categorie a.link-product:hover{text-decoration:underline;}
+
+/*******************************************
+ *
+ * Settings overgenomen van versie 2012
+ *
+ ********************************************/
+
+ .myshp_list_product {myshop-width:product-width px;	myshop-margin-right:product-margin-width px;}
+ .myshp_list_product_border {myshop-border-color:product-color-border-normal;}
+ .myshp_list_product_border:hover {myshop-border-color:product-color-border-active;}
+ .myshp_list_product_image {	myshop-width:product-image-width px;	myshop-height:product-image-height px;		}
+ .myshp_list_product_features { myshop-text-align:product-text-alignment;		}
+ .myshp_list_spacer {myshop-height:product-margin-width px;}
+ .myshp_content_width { myshop-width:productlist-width px;}
+ #myshp_content_frame {myshop-width:content-width px;}
+
+</style>
+
+
+</head>
+<body>
+		<!-- catogorie aanduiding <div>
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+		  <tr>
+		    <td align="left" class="catbar_links" >
+		          <p>&nbsp;</p>
+				  </td>
+
+				  <td align="center" class="catbar_midden">
+
+                <div class="blok-tekst-categorie">
+                <div style="myshop-not-has:previous-page;">
+                        <h1>zoekresultaten SpelPlus</h1>
+                    <p class="blok-tekst-categorie-intro">
+                    <br /></p>
+                </div>
+
+                <div style="myshop-has:previous-page;">
+                        <h1>zoekresultaten SpelPlus</h1>
+                    <p class="blok-tekst-categorie-intro">
+                    <br /></p>
+                </div>
+                </div>
+                  </td>
+
+				  <td class="catbar_rechts">
+				  <p>&nbsp;</p>
+					</td>
+				</tr>
+		</table>
+
+
+	</div>  eind catogorie aanduiding -->
+
+
+
+
+
+	<!-- navigatie element SpelPlus -->
+	<div style="myshop-has:results; color:#000">
+
+		<div class="moreinfo-navbalk-container">
+			<div class="moreinfo-navbalk-vorige-sp">
+				<span style="myshop-has:myshop-has:previous-page">
+					<a style="myshop-action:myshop-action:previous-page" id="myshp_info_prev_button">
+						<img class="button-vorige" src="https://myshop.s3-external-3.amazonaws.com/shop2900600.images.icon-previous-black.png" height="9" alt="Vorige SpelPlus spel" />&nbsp;<span style="myshop-resource:previous.lowercase;" >vorige</span></a>
+					</span>
+				</div>
+				<div class="moreinfo-navbalk-midden-sp">
+					<span style="myshop-default:start-count; color:#000"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+				</div>
+				<div class="moreinfo-navbalk-volgende-sp">
+					<!-- Next product button -->
+					<span style="myshop-has:next-page">
+						<a style="myshop-action:next-page"><span style="myshop-resource:next.lowercase;" >volgende</span>&nbsp;<img class="button-volgende" src="https://myshop.s3-external-3.amazonaws.com/shop2900600.images.icon-next-black.png" alt="Volgende SpelPlus spel" height="9" /></a></span>
+					</div>
+				</div>
+			</div>
+			<!-- einde navigatie element spelplus -->
+
+			<!-- begin zoekvelden ....-->
+			<div style="myshop-has:searchblock;">
+
+				<div style="myshop-is:search-method-quick">
+					<div id="myshp_info_search_block" class="myshp_info_search_form">
+						<div style="float:left; margin-right: 10px; margin-top: 5px;">
+							<div class="myshp_info_search_field_label">
+								<span style="myshop-resource:globalsearch">Alle producten</span>
+							</div>
+							<div class="myshp_info_search_field">
+								<span style="myshop-search-field:control-global; float: left;"/>
+							</div>
+						</div>
+
+						<div>
+							<div class="myshp_info_search_field" style="margin-top:19px; float: left;">
+								<a style="myshop-action:search;" class="myshp_button icon_align_left icon_image_search">
+									<span class="btn_bg_left">&nbsp;</span>
+									<span class="btn_bg_center">
+										<span class="btn_icon">&nbsp;</span>
+										<span class="btn_text" style="myshop-resource:search">Search</span>
+									</span>
+									<span class="btn_bg_right">&nbsp;</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div style="myshop-is:search-method-category">
+					<!-- Not supported yet, use a 2.4 shop -->
+				</div>
+				<div style="myshop-is:search-method-column">
+					<!-- Not supported yet, use a 2.4 shop -->
+				</div>
+
+				<div style="myshop-is:search-method-extended">
+
+					<div id="myshp_info_search_block" class="myshp_info_search_form">
+						<span style="myshop-repeat:search-fields">
+							<div style="float:left; margin-right: 10px; margin-top:5px;">
+								<span style="myshop-not-has:search-field-max;">
+									<div class="myshp_info_search_field_label">
+										<span style="myshop-search-field:label"/>:
+									</div>
+									<div class="myshp_info_search_field">
+										<span style="myshop-search-field:control"/>
+									</div>
+								</span>
+								<span style="myshop-has:search-field-max;">
+									<div style="float:left; margin-right:10px;">
+										<div class="myshp_info_search_field_label">
+											<span style="myshop-search-field:label"/>&#160;<span style="myshop-resource:from;">van</span>:
+										</div>
+										<div class="myshp_info_search_field">
+											<input size="11" style="myshop-search-field:control"/>
+										</div>
+									</div>
+									<div style="float:left;">
+										<div class="myshp_info_search_field_label">
+											<span style="myshop-search-field:label"/>&#160;<span style="myshop-resource:to;">t/m</span>:
+										</div>
+										<div class="myshp_info_search_field">
+											<input size="11" style="myshop-search-field:control-max"/>
+										</div>
+									</div>
+								</span>
+							</div>
+						</span>
+						<span style="myshop-has:global-search">
+							<div style="float:left; margin-right: 10px; margin-top: 5px;">
+								<div class="myshp_info_search_field_label">
+									<span style="myshop-resource:globalsearch">Alle producten</span>
+								</div>
+								<div class="myshp_info_search_field">
+									<span style="myshop-search-field:control-global; float: left;"/>
+								</div>
+							</div>
+						</span>
+						<div class="myshp_info_search_button">
+							<a style="myshop-action:search;" class="myshp_button icon_align_left icon_image_search">
+								<span class="btn_bg_left">&nbsp;</span>
+								<span class="btn_bg_center">
+									<span class="btn_icon">&nbsp;</span>
+									<span class="btn_text" style="myshop-resource:search">Search</span>
+								</span>
+								<span class="btn_bg_right">&nbsp;</span>
+							</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+			</div>
+			<!-- eind zoekvelden -->
+
+			<div class="clear">&nbsp;</div>
+			<div style="myshop-has:results">
+				<div style="myshop-block:productlist;" id="myshp_list" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+
+					<div class="myshp_list_row">
+
+						<span style="myshop-repeat:product-columns;">
+
+							<div style="myshop-block:product;" class="myshp_list_product" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/Product">
+								<span style="display:none;" itemprop="brand">SpelPlus</span>
+
+								<div class="myshp_list_product_border">
+
+									<div style="myshop-has-product-value:title" class="myshp_list_product_title">
+										<div class="myshp_list_product_border_left">
+											<div class="myshp_list_product_border_right">
+												<div class="myshp_list_product_border_top_corner_left">
+													<div class="myshp_list_product_border_top_corner_right">
+														<span style="myshop-has:moreinfo">
+															<a style="myshop-action:moreinfo;">
+																<span style="myshop-product:title" itemprop="name" class="testing">&nbsp;</span>
+															</a>
+														</span>
+														<span style="myshop-not-has:moreinfo">
+															<span style="myshop-product:title" itemprop="name">&nbsp;</span>
+														</span>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div style="myshop-not-has-product-value:title" class="" >
+										<div class="myshp_list_product_border_left">
+											<div class="myshp_list_product_border_right">
+												<div class="myshp_list_product_border_top_corner_left">
+													<div class="myshp_list_product_border_top_corner_right">
+														&nbsp;
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="myshp_list_product_border_left">
+										<div class="myshp_list_product_border_right">
+
+											<div class="myshp_list_product_body">
+
+												<span style="myshop-has-product:image;">
+													<span style="myshop-has-product-value:image;">
+														<span style="myshop-has:moreinfo">
+															<a style="myshop-action:moreinfo;" itemprop="url">
+																<img src="myshop-product:image;" alt="myshop-product:title;" class="myshp_list_product_image" itemprop="myshop-product:itemprop-image"/>
+
+															</a>													</span>
+															<span style="myshop-not-has:moreinfo">
+																<img src="myshop-product:image;" alt="myshop-product:title;" class="myshp_list_product_image" itemprop="myshop-product:itemprop-image"/>
+															</span>
+														</span>
+													</span>
+
+													<!-- Begin - Product Features -->
+													<div class=" myshp_list_product_body">
+														<table style="myshop-has:label">
+															<span style="myshop-repeat:product-features">
+																<tr style="myshop-has-value:feature">
+																	<span style="myshop-not-is:feature-price">
+																		<td class="myshp_list_product_feature_label">
+																			<strong>
+																				<span style="myshop-feature:label"></span>:
+																			</strong>
+																		</td>
+																		<td class="myshp_list_product_feature_value">
+																			<span style="myshop-feature:value;"></span>
+																		</td>
+																	</span>
+																</tr>
+															</span>
+														</table>
+														<div style="myshop-not-has:label">
+															<div style="myshop-repeat:product-features">
+																<div style="myshop-has-value:feature">
+																	<div style="myshop-not-is:feature-price">
+																		<span style="myshop-feature:value;" class="myshp_list_product_value"></span>
+																	</div>
+																	<span style="myshop-has:features-on-same-line" class="myshp_list_product_value"></span>
+																	<span style="myshop-not-has:features-on-same-line" class="clear myshp_list_product_break"></span>
+																</div>
+															</div>
+
+															<!-- <div style="myshop-is:in-stock">
+																<div style="myshop-has:order">
+																	<div style="myshop-has:quantity-field">
+																		<div class="myshp_list_product_value">
+																			<input style="myshop-control:quantity;" size="3"/>
+																		</div>
+																	</div>
+																</div>
+															</div> -->
+
+														</div>
+													</div>
+													<!-- End - Product Features -->
+
+
+													<div class="cos-product-title">
+														<a style="myshop-action:moreinfo;" itemprop="url"><span style="myshop-value:Product"></span></a>
+													</div>
+
+													<div class="cos-product-features">
+														<div class="cos-product-feature-row">Prijs: <span style="myshop-value:Prijs_Netto"></span></div>
+														<div class="cos-product-feature-row">BTW: <span style="myshop-value:BTW_Percentage"></span>%</div>
+														<div class="cos-product-feature-row"><b>Prijs met BTW: <span style="myshop-value:Prijs_Bruto"></span></b></div>
+													</div>
+
+
+													<div class="myshp_list_product_order_section">
+														<div class="myshp_list_product_order_body">
+
+															<div class="myshp_list_product_space_top"></div>
+															<!-- <div style="myshop-product:price;" class="myshp_list_product_value_price" itemprop="price"></div> -->
+
+															<div class="myshp_list_product_space_top"></div>
+
+															<div class="myshp_list_graphic_buttons">
+																<div style="myshop-has:moreinfo-link">
+																	<!-- THIS IS A BUTTON WITHOUT ICON -->
+																	<a href="#" class="myshp_button icon_align_left icon_image_help myshp_list_product_moreinfo_button" style="myshop-action:moreinfo;">
+																		<span class="btn_bg_left"></span>
+																		<span class="btn_bg_center">
+																			<span class="btn_icon"></span>
+																			<span class="btn_text" style="myshop-resource:moreinfo">meerinfo</span>
+																		</span>
+																		<span class="btn_bg_right"></span>
+																	</a>
+																</div>
+															</div>
+															<div class="myshp_list_text_buttons">
+																<div style="myshop-has:moreinfo-link">
+																	<a style="myshop-action:moreinfo;" class="myshp_list_product_moreinfo_button">
+																		<div style="myshop-resource:moreinfo">meerinfo</div>
+																	</a>
+																</div>
+															</div>
+
+															<div style="myshop-is:in-stock">
+																<div style="myshop-has:order">
+																	<div style="myshop-has:quantity-field">
+																		<div class="clear"></div>
+																		<input style="myshop-control:quantity;margin-top: 7px; display: inline; vertical-align: top;" class="myshp_list_product_quantity_field"/>
+																	</div>
+																</div>
+															</div>
+
+															<div class="myshp_list_graphic_buttons">
+																<div style="myshop-is:in-stock">
+																	<div style="myshop-has:order">
+																		<div style="myshop-has:quantity-field">
+																			<!-- THIS IS A BUTTON WITH THE ICON PLACED TO THE RIGHT, WITH A SHOPPING CART IMAGE-->
+																			<a href="#" class="myshp_button icon_align_right icon_image_shopping_cart myshp_list_product_order_button" style="myshop-action:order;display:inline-block; margin-right:0px;">
+																				<span class="btn_bg_left"></span>
+																				<span class="btn_bg_center">
+																					<span class="btn_icon"></span>
+																					<span class="btn_text"></span>
+																				</span>
+																				<span class="btn_bg_right"></span>
+																			</a>
+																		</div>
+																		<div style="myshop-not-has:quantity-field">
+																			<!-- THIS IS A BUTTON WITH THE ICON PLACED TO THE RIGHT, WITH A SHOPPING CART IMAGE-->
+																			<a href="#" class="myshp_button icon_align_right icon_image_shopping_cart myshp_list_product_order_button" style="myshop-action:order;">
+																				<span class="btn_bg_left"></span>
+																				<span class="btn_bg_center">
+																					<span class="btn_icon"></span>
+																					<span class="btn_text" style="myshop-resource:order.lowercase">bestel</span>
+																				</span>
+																				<span class="btn_bg_right"></span>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="myshp_list_text_buttons">
+																<div style="myshop-is:in-stock">
+																	<div style="myshop-has:order">
+																		<div style="myshop-has:quantity-field">
+																			&nbsp;
+																			<a style="myshop-action:order;display:inline-block;margin-top:2px;" class="myshp_list_product_order_button">
+																				<div style="myshop-resource:order.lowercase">bestellen</div>
+																			</a>
+																		</div>
+																		<div style="myshop-not-has:quantity-field">
+																			<a style="myshop-action:order;" class="myshp_list_product_order_button">
+																				<div style="myshop-resource:order.lowercase">bestellen</div>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="myshp_list_product_space_bottom"></div>
+														</div>
+													</div>
+													<div class="clear"></div>
+
+												</div>
+											</div>
+										</div>
+
+										<div class="myshp_list_product_footer myshp_list_product_border_bottom">
+											<div class="myshp_list_product_border_left">
+												<div class="myshp_list_product_border_right">
+													<div class="myshp_list_product_border_bottom_corner_left">
+														<div class="myshp_list_product_border_bottom_corner_right">
+															&nbsp;
+															<div class="clear"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</span>
+
+						</div>
+
+					</div>
+					<br />
+
+					<!-- navigatie element SpelPlus -->
+					<div style="myshop-has:results; color:#000">
+
+						<div class="moreinfo-navbalk-container">
+							<div class="moreinfo-navbalk-vorige-sp">
+								<span style="myshop-has:myshop-has:previous-page">
+									<a style="myshop-action:myshop-action:previous-page" id="myshp_info_prev_button">
+										<img class="button-vorige" src="https://myshop.s3-external-3.amazonaws.com/shop2900600.images.icon-previous-black.png" height="9" alt="Vorige SpelPlus spel" />&nbsp;<span style="myshop-resource:previous.lowercase;" >vorige</span></a>
+									</span>
+								</div>
+								<div class="moreinfo-navbalk-midden-sp">
+									<span style="myshop-default:start-count; color:#000"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+								</div>
+								<div class="moreinfo-navbalk-volgende-sp">
+									<!-- Next product button -->
+									<span style="myshop-has:next-page">
+										<a style="myshop-action:next-page"><span style="myshop-resource:next.lowercase;" >volgende</span>&nbsp;<img class="button-volgende" src="https://myshop.s3-external-3.amazonaws.com/shop2900600.images.icon-next-black.png" alt="Volgende SpelPlus spel" height="9" /></a></span>
+									</div>
+								</div>
+							</div>
+							<!-- einde navigatie element spelplus -->
+
+
+							<!-- categorie tekst onder de tabel met producten -->
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" style="color:#000" align="center">
+								<tr>
+									<td align="center" class="catbar_links"  >
+										<p>&nbsp;</p>
+									</td>
+
+									<td align="center" class="catbar_midden">
+										<div style="blok-tekst-categorie">
+											<div style="myshop-not-has:previous-page;">
+
+												<h2></h2>
+												<p class="blok-tekst-categorie-intro">
+												</p>
+
+											</div>
+										</div>
+
+									</td>
+
+									<td class="catbar_rechts">
+										<p>&nbsp;</p>
+									</td>
+								</tr>
+							</table>
+							<!-- einde tekst -->
+
+
+							<div class="verberg"><!-- geen navigatie aan de onderkant (gebruik class verberg om niet te tonen)-->
+								<div class="myshp_list_spacer" name="myshp_list_spacer"></div>
+
+
+
+								<div class="myshp_list_navigation myshp_list_navigation_bottom">
+									<div style="float: left; text-align: left; width: auto; myshop-default:powered-by"></div>
+									<div style="display:inline; float:right;">
+										<div style="myshop-has:previous-page">
+											<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next"><span style="myshop-resource:prev">Vorige</span></a>
+											&nbsp;|&nbsp;
+										</div>
+										<span style="myshop-default:start-count"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+										<div style="myshop-has:next-page">
+											&nbsp;|&nbsp;
+											<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev"><span style="myshop-resource:next">Volgende</span></a>
+										</div>
+									</div>
+								</div>
+							</div><!-- eind geen navigatie aan de onderkant -->
+						</div>
+						<div class="clear"></div>
+
+						<div style="myshop-not-has:results" class="myshp_list_no_results">
+							<br/><br/>
+							<span style="myshop-resource:noresult">Helaas, er zijn geen resultaten.</span>
+						</div>
+
+					</body>
+					</html>
